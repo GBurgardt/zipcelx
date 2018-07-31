@@ -32,6 +32,7 @@ export default (config) => {
 
   return zip.generateAsync({ type: 'blob' })
     .then((blob) => {
-      FileSaver.saveAs(blob, `${config.filename}.xlsx`);
+      // FileSaver.saveAs(blob, `${config.filename}.xlsx`);
+      FileSaver.saveAs(blob, `${config.filename}.xls`);
     });
 };
